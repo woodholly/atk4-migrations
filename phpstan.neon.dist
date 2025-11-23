@@ -1,0 +1,21 @@
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+    level: 6
+    checkMissingOverrideMethodAttribute: true
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - vendor
+
+    ignoreErrors:
+        # getIndexes() is defined in Atk4\Migrations\Model, checked at runtime with method_exists
+        -
+            message: '~^Call to an undefined method Atk4\\Data\\Model::getIndexes\(\)\.$~'
+            path: src/Atk4SchemaProvider.php
+        # getForeignKeys() is defined in Atk4\Migrations\Model, checked at runtime with method_exists
+        -
+            message: '~^Call to an undefined method Atk4\\Data\\Model::getForeignKeys\(\)\.$~'
+            path: src/Atk4SchemaProvider.php

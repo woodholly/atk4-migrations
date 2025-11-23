@@ -1,0 +1,38 @@
+{
+    "name": "woodholly/atk4-migrations",
+    "description": "Database migrations for ATK4 Data using Doctrine Migrations",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["atk4", "migrations", "database", "schema", "doctrine"],
+    "authors": [
+        {
+            "name": "ATK4 Community"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "atk4/data": "^6.0",
+        "doctrine/migrations": "^3.5",
+        "symfony/console": "^5.0 || ^6.0 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0 || ^10.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.0 || ^2.0",
+        "phpstan/phpstan-strict-rules": "^1.0 || ^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atk4\\Migrations\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atk4\\Migrations\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "migrations-cli.php"
+    ],
+    "minimum-stability": "stable"
+}

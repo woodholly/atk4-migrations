@@ -1,0 +1,41 @@
+# Dependencies
+/vendor/
+/composer.lock
+
+# PHPUnit
+/.phpunit.cache/
+/.phpunit.result.cache
+
+# PHP CS Fixer
+/.php-cs-fixer.cache
+/.php_cs.cache
+
+# Coverage
+/coverage/
+/build/
+
+# Migration files (user-generated)
+/migrations/*.php
+!/migrations/.gitkeep
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
+.claude/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
